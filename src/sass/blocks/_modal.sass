@@ -1,0 +1,30 @@
+.modal
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    display: none
+    
+    &-overlay
+        background-color: rgba(#000, 0.5)
+        width: 100%
+        height: 100%
+        position: absolute
+        cursor: pointer
+        z-index: 99
+    &_active
+        display: flex
+    &-dialog
+        margin: auto
+        min-width: 40vw
+        min-height: 50vh
+        background: #ffffff
+        z-index: 100
+        position: relative
+        &__close
+            position: absolute
+            top: 0
+            right: 0
+            cursor: pointer
+    

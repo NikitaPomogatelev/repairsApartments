@@ -1,0 +1,100 @@
+*
+    box-sizing: border-box
+    
+body
+    background: #fff
+    +reg
+
+
+img
+    max-width: 100% 
+
+ul
+    list-style: none
+button
+    border: none
+button, input
+    outline: none
+
+a 
+    text-decoration: none
+    
+.container
+    width: 1170px
+    max-width: 95%
+    margin: auto
+
+@media (max-width: 1200px)
+    .container
+        width: 760px
+
+
+@media (max-width: 768px)
+    .container
+        width: 580px
+        max-width: 95%
+
+.button
+    border-radius: 10px
+    background-color: $main-color
+    padding: 18px 30px
+    +bold
+    cursor: pointer
+
+.section
+    padding: 90px 0
+    &-title
+        font-size: 24px
+        +bold
+        text-align: center
+        max-width: 500px
+    &-subtitle
+        font-size: 16px
+        display: block
+
+.input
+    border: 1px solid $border-input
+    padding: 20px 25px
+    font-size: 15px
+    border-radius: 10px
+    +reg
+    &:focus
+       border: 1px solid $main-color
+
+//  Кнопка вверх
+.button-up
+    position: fixed
+    right: 10%
+    bottom: 10%
+    width: 65px
+    height: 65px
+    border-radius: 50%
+    padding: 13px
+    background: darken($main-color, 5%)
+    cursor: pointer
+    transition: background 0.6s ease
+    display: none
+    z-index: 200
+
+.button-up:hover, .button-up:focus
+    background: darken($main-color, 3%)
+
+.arrows
+    &__left, &__right
+        background: transparent
+        &:hover
+            cursor: pointer
+    
+.has-invalid
+    border: 1px solid red
+
+.invalid
+    color: red
+       
+
+
+@media (min-width: 1200px)
+    .button
+        &:hover
+            background-color: lighten($main-color, 10%)
+        

@@ -1,0 +1,19 @@
+.prompt
+    background: $bg-color
+    &__info
+        font-size: 32px
+        +reg
+        color: $text-color
+        text-align: center
+        line-height: 50px
+        margin: 0
+
+@media (max-width: 768px)
+    .prompt
+        &__info
+            font-size: 18px
+            line-height: 1.4
+            max-width: 268px
+            width: 98%
+            margin: auto
+        
